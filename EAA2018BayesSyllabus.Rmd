@@ -1,0 +1,57 @@
+---
+output: 
+  pdf_document:
+    fig_caption: yes
+    latex_engine: pdflatex
+    template: templates/svm-latex-syllabus.tex
+geometry: top=0.7in,left=1.9cm,right=1.9cm,bottom=0.7in
+
+title: "EAA PhD Forum 2018: Bayesian Statistics in Accounting Research"
+
+author: Harm H. Schuett -- LMU Munich School of Management
+email: "schuett@bwl.lmu.de"
+web: "github.com/hschuett/EAA2018Bayes"
+
+fontfamily: mathpazo
+fontsize: 10pt
+header-includes:
+   - \linespread{1.05}
+bibliography: lit/bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+```
+
+> ``If I’m doing an experiment to save the world, I better use my prior.'' -- [Andrew Gelman](http://www.stat.columbia.edu/~gelman/book/gelman_quotes.pdf)
+
+## Learning Objectives
+
+- Review hypothesis testing and uncertainty 
+- Understand why arguing "if it is a noisy measure it will work against me finding a result" is dangerous.
+- Discuss how to use priors to combat the noise problem
+- Discuss how to use priors/updating to identify latent variables
+- Start thinking about where you can apply this in your own work
+
+## Description
+
+This session is aimed at young accounting researchers who are interested in learning new, robust methods to identify the many latent constructs we deal with in accounting. Because of advances in computing power and the public debate about issues in the application of classical hypothesis testing [e.g., @simmons2011false; @dyckman2014some; @gelman2014beyond; @harvey2017presidential], Bayesian statistics is gaining more and more traction in various areas of the social sciences. This session is intended to give a short, accessible introduction to Bayesian Statistics and its possible use case for accounting research. 
+
+Bayesian statistics excels at two things. First it helps incorporating external knowledge into the model, thereby regularizeing estimates (i.e., reducing the chance of noise fitting). Second it provides a flexible approach to model latent variables. Both use cases hold significant potential for accounting research questions that involve hard to measure constructs from noisy data. Such constructs are for example: disclosure characteristics (e.g., readability), accrual quality, undetected fraud [@hahn2016bayesian], latent topics and their distributions in a corpus of documents [e.g., @dyer2017evolution], latent financial news audiences [@schutt2017competition], or uncovering incrementally useful variables [@cremers2002stock]. In 75 minutes we will discuss: 
+
+1.	What is the difference to frequentist statistics?
+2.	What are the practical (rather than philosophical) advantages of Bayesian statistics?
+3.	In which areas and settings is Bayesian statistics useful to accounting researchers?
+4.	Bayesian statistics is computationally more complex. What are the practical hurdles?
+
+Bayesian and Frequentist statistics are two tools. Each has advantages and disadvantages. Talking about the differences between Bayesian and Frequentist approaches to statistics is instructive not only for understanding how Bayesian data analysis works, but also for better understanding how to apply frequentist methods. Thus, we will spend some time on that. The remainder of the session will use a few examples to illustrate how Bayesian analysis works and when it is most useful for us: Settings where we want to model heterogeneity and settings with noisy data or hard to measure constructs. In such situations, the chance of accidental noise fitting and false positives is high. Here we would like to use every bit of uncontroversial prior knowledge we have to improve the precision of our inferences. Bayesian methods offer a very flexible and intuitive approach to do just that [@gelman2014bayesian]. Many people find, as Nobel laureate Christopher Sims remarked: ``Once one becomes used to thinking about inference from a Bayesian perspective, it becomes difficult to understand why many econometricians are uncomfortable with that way of thinking'' [@sims2010, p.1; @sims2007bayesian]. However, the downside is that these methods are more complex to code and computationally intensive. Thus, we will end with a discussion of the practical hurdles of Bayesian approaches.
+
+## Intended Audience
+
+Anyone with a basic understanding of classical regression analysis and an interest in new methods for measuring constructs or modelling heterogeneity.
+
+## Materials
+
+The examples used will be coded using R and Stan. Slides, R and Stan code will be available at the github repo and ARC platform shortly before the session. 
+
+## References
